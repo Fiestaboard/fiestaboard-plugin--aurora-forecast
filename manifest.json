@@ -1,0 +1,69 @@
+{
+  "id": "aurora_forecast",
+  "name": "Aurora Forecast",
+  "version": "0.1.0",
+  "description": "Display the current geomagnetic storm (Kp) index and aurora activity forecast.",
+  "author": "FiestaBoard Team",
+  "icon": "sparkles",
+  "category": "weather",
+  "repository": "https://github.com/Fiestaboard/fiestaboard-plugin--aurora-forecast",
+  "documentation": "README.md",
+  "min_refresh_seconds": 300,
+  "settings_schema": {
+    "type": "object",
+    "properties": {
+      "enabled": {
+        "type": "boolean",
+        "title": "Enabled",
+        "default": false
+      },
+      "refresh_seconds": {
+        "type": "integer",
+        "title": "Refresh Interval (seconds)",
+        "description": "How often to fetch aurora data.",
+        "default": 300,
+        "minimum": 180
+      }
+    },
+    "required": []
+  },
+  "variables": {
+    "groups": {
+      "storm": {
+        "label": "Storm Index"
+      }
+    },
+    "simple": {
+      "kp_index": {
+        "description": "Current Kp index (0-9)",
+        "type": "number",
+        "max_length": 4,
+        "group": "storm",
+        "example": "3.67"
+      },
+      "activity": {
+        "description": "Activity level description",
+        "type": "string",
+        "max_length": 20,
+        "group": "storm",
+        "example": "Quiet"
+      },
+      "aurora_visible": {
+        "description": "Yes if aurora likely visible at mid-latitudes",
+        "type": "string",
+        "max_length": 3,
+        "group": "storm",
+        "example": "No"
+      }
+    }
+  },
+  "screenshots": [
+    {
+      "src": "docs/board-display.png",
+      "alt": "Aurora Forecast displayed on a Vestaboard",
+      "caption": "Example board output using the default template",
+      "primary": true
+    }
+  ],
+  "api_docs": "https://www.swpc.noaa.gov/products/planetary-k-index"
+}
