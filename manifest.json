@@ -1,7 +1,7 @@
 {
   "id": "aurora_forecast",
   "name": "Aurora Forecast",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "Display the current geomagnetic storm (Kp) index and aurora activity forecast.",
   "author": "FiestaBoard Team",
   "icon": "sparkles",
@@ -65,5 +65,47 @@
       "primary": true
     }
   ],
-  "api_docs": "https://www.swpc.noaa.gov/products/planetary-k-index"
+  "api_docs": "https://www.swpc.noaa.gov/products/planetary-k-index",
+  "demo": {
+    "name": "Aurora Forecast Demo",
+    "device_type": "flagship",
+    "config": {
+      "enabled": true,
+      "refresh_seconds": 300
+    },
+    "template": [
+      "Aurora Forecast",
+      "",
+      "Kp Index: {{aurora_forecast.kp_index}}",
+      "Activity: {{aurora_forecast.activity}}",
+      "Visible:  {{aurora_forecast.aurora_visible}}",
+      ""
+    ],
+    "line_metadata": [
+      {
+        "alignment": "center",
+        "wrap": false
+      },
+      {
+        "alignment": "left",
+        "wrap": false
+      },
+      {
+        "alignment": "left",
+        "wrap": false
+      },
+      {
+        "alignment": "left",
+        "wrap": false
+      },
+      {
+        "alignment": "left",
+        "wrap": false
+      },
+      {
+        "alignment": "left",
+        "wrap": false
+      }
+    ]
+  }
 }
