@@ -1,7 +1,7 @@
 {
   "id": "aurora_forecast",
   "name": "Aurora Forecast",
-  "version": "0.1.2",
+  "version": "0.1.3",
   "description": "Display the current geomagnetic storm (Kp) index and aurora activity forecast.",
   "author": "FiestaBoard Team",
   "icon": "sparkles",
