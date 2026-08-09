@@ -65,6 +65,27 @@
       "primary": true
     }
   ],
+  "teaser": "AURORA KP 3.7",
+  "previews": [
+    {
+      "device_type": "flagship",
+      "rows": [
+        "   Aurora Forecast",
+        "",
+        "Kp Index: 3.67",
+        "Activity: Quiet",
+        "Visible:  No"
+      ]
+    },
+    {
+      "device_type": "note",
+      "rows": [
+        "{66}{68}{66}{68} AURORA",
+        "KP 3.7 QUIET",
+        "{68}{66}{68}{66}{68}{66}{68}{66}{68}{66}{68}{66}{68}{66}{68}"
+      ]
+    }
+  ],
   "api_docs": "https://www.swpc.noaa.gov/products/planetary-k-index",
   "demo": {
     "flagship": {
